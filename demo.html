@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Gilroy-Regular';
+            src: local('Gilroy-Regular'), url('./fonts/Gilroy-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Chronicle-Display';
+            src: local('Chronicle-Display'), url('./fonts/Chronicle Display Roman.otf') format('OpenType');
+        }
+
+        body {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="15" fill="none" stroke="white" stroke-width="2"/></svg>') 16 16, auto;
+            margin: 0;
+            color: #FFFFFF;
+        }
+
+        .header-main-container {
+            width: 100%;
+            height: auto;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 20%, #0B1D26 35%, #0B1D26 50%, #0B1D26 70%, #0B1D26 100%),
+            url('green-mountains_2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Gilroy-Regular', sans-serif;
+            font-weight: 700;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 3%;
+        }
+        .explore, .account {
+            display: flex;
+            align-items: center;
+        }
+        .explore-title {
+            letter-spacing: 1px;
+            padding: 0 1rem;
+        }
+        .header-center-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 6% 0 44%;
+        }
+        .follow-us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .social-icon {
+            width: 24px; 
+            height: 24px;
+            margin-top: 1.5rem;
+        }
+        .line {
+            display: inline-block;
+            width: 72px;
+            height: 0;
+            margin-right: 30px;
+            border: 1px solid #fad276;
+            align-items: center;
+            font-weight: 700;
+        }
+        .header-main-title {
+            letter-spacing: 2px;
+            font-size: 5.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #FFFFFF;
+            font-family: 'Chronicle-Display';
+        }
+        .scroll-down {
+            display: flex;
+            color: #FFFFFF; 
+        }
+        .scroll-arrow:hover {
+            transform: scale(1.2);
+            transition: 0.5s all ease 0s;
+        }
+        .hiking-content {
+            margin: 0 15%;
+            display: flex;
+            flex-direction: column;
+            gap: 13rem;
+        }
+        .get-started-01, .hiking-essentials-02 {
+            display: flex;
+            justify-content: space-between;
+            height: 45rem;
+        }
+        .big-number {
+            font-size: 15rem;  
+            color: rgba(255, 255, 255, 0.1);  
+            font-weight: 800;
+            position: absolute;
+        }
+        .question {
+            min-width: 75%;
+            font-size: 3.5rem;
+        } 
+        .answer, .answer-two {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+        .one-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+        }
+        .left-side-footer, .right-side-footer {
+            display: flex;
+            flex-direction: column;
+        }
+        .heading {
+            font-size: 1.5rem;
+            color: #fad276;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header-main-title {
+                font-size: 3rem;
+            }
+            .header-center-container {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 20%;
+            }
+            .hiking-content {
+                margin: 0 5%;
+                gap: 10rem;
+            }
+            .get-started-01, .hiking-essentials-02 {
+                flex-direction: column;
+                height: auto;
+            }
+            .big-number {
+                font-size: 10rem;
+            }
+            .question {
+                font-size: 2.5rem;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .left-side-footer, .right-side-footer {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-main-title {
+                font-size: 2.5rem;
+            }
+            .header-center-container {
+                margin-bottom: 15%;
+            }
+            .hiking-content {
+                gap: 8rem;
+            }
+            .big-number {
+                font-size: 7rem;
+            }
+            .question {
+                font-size: 2rem;
+            }
+            .answer, .answer-two {
+                font-size: 1rem;
+            }
+            .heading {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-main-container">
+        <div class="header-container">
+            <div class="header">
+                <div class="logo"><img src="Logo.svg" alt=""></div>
+                <div class="explore">
+                    <span class="explore-title">Equipment</span>
+                    <span class="explore-title">About us</span>
+                    <span class="explore-title">Blog</span>
+                </div>
+                <div class="account">
+                    <img src="account-logo.png" alt="" style="margin-right: 8px;">
+                    <span class="account-name">Account</span>
+                </div>
+            </div>
+
+            <div class="header-center-container">
+                <div class="follow-us">
+                    <span class="follow-text">Follow us</span>
+                    <a href="#"><img class="social-icon" src="instagram.svg" alt="instagram"></a>
+                    <a href="#"><img class="social-icon" src="twitter.svg" alt="twitter"></a>
+                </div>
+                <div class="header-text-content" style="display: flex; flex-direction: column; gap: 2rem">
+                    <div class="tag-line" style="display: flex;">
+                        <div class="line"></div>
+                        <span class="hiking-guide">A HIKING GUIDE</span>
+                    </div>
+                    <div class="header-main-title">Be Prepared For The <br> Mountains And Beyond!</div>
+                    <div class="scroll-down">
+                        <span class="scroll-text" style="padding-right: 15px;">scroll down</span>
+                        <a href="#"><img src="arrow.svg" alt="arrow" class="scroll-arrow"></a>
+                    </div> 
+                </div>
+                <div class="left-start">
+                    <p class="left-start-text">Start</p>
+                    <p class="left-start-text">01</p>
+                    <p class="left-start-text">02</p>
+                    <p class="left-start-text">03</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hiking-content-container">
+            <div class="hiking-content">
+                <section class="get-started-01">
+                    <div class="left-side-content">
+                        <div class="big-number">01</div>
+                        <div class="left-side-content-box">
+                            <div class="tag-line" style="display: flex;">
+                                <div class="line"></div>
+                                <div class="hiking-guide">GET STARTED</div>
+                            </div>
+                            <div class="question">What level of hiker are you?</div>
+                            <div class="answer">Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker?</div>
+                            <div class="read-more">Read more</div>
+                        </div>
+                    </div>
+                    <img class="one-image" src="hiking01.png" alt="">
+                </section>
+                <section class="hiking-essentials-02">
+                    <img class="one-image" src="hiking02.png" alt="">
+                    <div class="right-side-content">
+                        <div class="big-number">02</div>
+                        <div class="right-side-content-box">
+                            <div class="tag-line" style="display: flex;">
+                                <div class="line"></div>
+                                <div class="hiking-guide">ESSENTIALS</div>
+                            </div>
+                            <div class="question">What do you need?</div>
+                            <div class="answer-two">We offer the essentials you need for your hiking journey. Here are some key items you should consider packing on your next trip:</div>
+                            <div class="read-more">Read more</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="left-side-footer">
+                <div class="heading">Find Us</div>
+                <p>123 Main St, Anytown, USA</p>
+                <p>(123) 456-7890</p>
+            </div>
+            <div class="right-side-footer">
+                <div class="heading">Connect</div>
+                <p>Email: info@hikingguide.com</p>
+                <p>Social Media Links</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
