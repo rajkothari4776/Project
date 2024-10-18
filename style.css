@@ -29,6 +29,7 @@ body{
     url('green-mountains_2.png');
     background-repeat: no-repeat;
     /* background-size:cover; */
+    background-size: 100%;
     font-family: 'Gilroy-Regular', sans-serif;
     font-weight: 700;
     /* background-color: #0b1d2600; */
