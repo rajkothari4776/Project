@@ -631,6 +631,9 @@ and (max-device-width: 1200px)
         flex-direction: column;
         height: 35rem;
     }
+    .right-side-content{
+        margin-top:3rem;
+    }
     .right-side-content-box{
         display: flex;
         flex-direction: column;
