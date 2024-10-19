@@ -145,14 +145,11 @@ body{
     height: 45rem;
 }
 .big-number {
-    font-size: 15rem;  /* Large size for the number */
-    color: rgba(255, 255, 255, 0.1);  /* Light opacity for the number */
+    font-size: 15rem;  
+    color: rgba(255, 255, 255, 0.1);
     font-weight: 800;
     position: absolute;
-    
-      /* Space between the number and text */
 }
-
 .tag-line{
     display: flex;
     flex-direction: row;
@@ -244,7 +241,7 @@ body{
     padding-left: 5rem;
 }
 .read-more{
-    display: none; 
+    display: flex; 
     align-items: center; 
     text-align: center;
 }
@@ -252,6 +249,14 @@ body{
     display: none; 
     flex-direction: column; 
     gap:2rem
+}
+.logo-and-tagline{
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem;
+}
+.copyright{
+    color: #4f5153;
 }
 
 @media screen
@@ -463,7 +468,7 @@ and (max-device-width: 1200px)
     }
     .header-center-container{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         align-items: center;
         /* padding-bottom: 60%; */
@@ -472,23 +477,30 @@ and (max-device-width: 1200px)
         /* padding-top: 5%; */
     }
     .follow-us{
-        display: none;
-        flex-direction: column;
+        margin-top:4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
         /* position: relative; */
         top: 20%;
         padding-left: 3%;
         padding-right: 3%;
-        align-items: center;
         font-family: 'Gilroy-Regular', sans-serif;
+        
+        
     } 
     .follow-text{
-        writing-mode: vertical-lr;
+        writing-mode: horizontal-tb;
+        font-size: 1.2rem;
     
     }
     .social-icon {
-        width: 24px; 
-        height: 24px;
-        margin-top: 1.5rem;
+        margin-left:5px;
+        width: 35px; 
+        height: 35px;
+        margin-top: 0;
+        
         /* margin-bottom: 10px;  */
     }
     .line{
@@ -540,27 +552,25 @@ and (max-device-width: 1200px)
         /* background-image:  linear-gradient(to bottom, #0B1D2600, transparent); */
         /* margin-left: 12%; */
         /* margin-right: 12%; */
-        margin-left: 15%;
-        margin-right: 15%;
-        display: flex;
-        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: block;
+        flex-direction: none;
         gap: 5rem;
         /* background-color: #0B1D2600; */
     }
     .get-started-01{
         /* background-color: #0d222c7b; */
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-direction: column;
-        height: 45rem;
+        height: 35rem;
     }
     .big-number {
-        font-size: 5rem;  /* Large size for the number */
-        color: rgba(255, 255, 255, 0.1);  /* Light opacity for the number */
+        font-size: 5rem;
+        color: rgba(255, 255, 255, 0.1);
         font-weight: 800;
         position: absolute;
-        
-          /* Space between the number and text */
     }
     
     .tag-line{
@@ -575,10 +585,10 @@ and (max-device-width: 1200px)
     }
     .question{
         min-width: 75%;
-        width:75%;
-        max-width:75%; 
+        width:100%;
+        max-width:100%; 
         max-width:100%;
-        font-size:1rem;
+        font-size:2rem;
         /* /* margin-bottom: 2rem; */
     } 
     .header-text-content{
@@ -589,7 +599,8 @@ and (max-device-width: 1200px)
     .answer{
         font-size: 1.1rem;
         min-width: 65%;
-        width: 80%;max-width: 80%; 
+        width: 100%;
+        max-width: 100%; 
         text-align: start; 
         line-height: 1.5;
     }
@@ -605,23 +616,25 @@ and (max-device-width: 1200px)
         display: flex; 
         flex-direction: column; 
         /* justify-content: center;  */
-        margin-top: 0;
+        margin-top: 2rem;
         margin-left:0;
-        margin-bottom: 0;
+        margin-bottom:0;
+        margin-right:0;
         gap: 2rem;
+
         /* row-gap: 4rem; */
     }
     .hiking-essentials-02{
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        height: 45rem;
+        height: 35rem;
     }
     .right-side-content-box{
         display: flex;
         flex-direction: column;
-        margin-left: 30%;
-        margin-top: 8rem;
+        margin-left: 0;
+        margin-top: 2rem;
         gap: 2rem;
     }
     .answer-two{
@@ -630,7 +643,9 @@ and (max-device-width: 1200px)
     }
     
     .footer{
+        margin-top: 4rem;
         display: flex;
+        flex-direction: column-reverse;
         flex: 1 1 0px;
         justify-content: space-between;
     }
@@ -640,25 +655,37 @@ and (max-device-width: 1200px)
         justify-content: space-between;
     }
     .right-side-footer{
-        display: none;
-        gap: 202px;
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
     }
     .more-on-the-blog{
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
     }
     .more-on-MNTN{
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-    }
-    .heading{
-        font-size: 1.5rem;
-        color: #fad276;
-    }
-    .two{
-        padding-left: 5rem;
+        gap: 1rem;
     }
     
+    .heading{
+        font-size: 1rem;
+        color: #fad276;
+    }
+    .logo-and-tagline{
+        margin-top: 4rem;
+        gap:1rem;
+    }
+    .footer-logo-tagline{
+        display: none;
+    }
+
+    .two{
+        padding-left: 0;
+    }
+    .copyright{
+        margin-bottom:2rem;
+    }
 }
